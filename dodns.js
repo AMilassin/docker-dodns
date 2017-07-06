@@ -98,7 +98,7 @@ function updateDORecord(token, domainName, domainRecordId, changeset) {
 
 
 function updateDOConfiguration(ip) {
-  console.log(`Updating Digital Ocean DNS configuration to ${ip}...`);
+  console.log(`Updating Digital Ocean DNS configuration to ${ip} ${new Date().toLocaleString()}...`);
 
   const requests = configuration.domains.map((domain) => {
     console.log(`Updating Digital Ocean DNS configuration for ${domain.domain}...`);

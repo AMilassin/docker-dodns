@@ -33,6 +33,14 @@ module.exports = {
 The script supports multiple domains for updating, just add them one-by-one in the configuration file.
 
 
+# Running the container
+
+```
+docker run -v <local application data folder>:/config:rw amilassin/dodns
+```
+
+
+
 # Building the container
 
 ```

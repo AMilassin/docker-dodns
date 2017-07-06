@@ -35,13 +35,18 @@ The script supports multiple domains for updating, just add them one-by-one in t
 
 # Running the container
 
+A pre-built version of the container is available at Docker Hub - [https://hub.docker.com/r/amilassin/docker-dodns/](https://hub.docker.com/r/amilassin/docker-dodns/).
+
+
 ```
-docker run -v <local application data folder>:/config:rw amilassin/dodns
+docker run -d -v <local application data folder>:/config:rw amilassin/docker-dodns
 ```
 
 
 
 # Building the container
+
+If you want to build the container yourself just clone this repo and run the following command:
 
 ```
  docker build -t dodns .

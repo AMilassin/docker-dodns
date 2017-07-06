@@ -37,6 +37,10 @@ The script supports multiple domains for updating, just add them one-by-one in t
 
 A pre-built version of the container is available at Docker Hub - [https://hub.docker.com/r/amilassin/docker-dodns/](https://hub.docker.com/r/amilassin/docker-dodns/).
 
+The only requirement for the container is a folder to store the configuration file. An empty file is copied to the folder on first star if none is found. Please fill-in the required configurations. New configurations are picked up on next attempt to update the IP.
+
+You can run the container with the following command:
+
 
 ```
 docker run -d -v <local application data folder>:/config:rw amilassin/docker-dodns

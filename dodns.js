@@ -5,11 +5,8 @@
 const https = require('https');
 const { URL } = require('url');
 
-let configuration = require('/config/dodns.conf.js');
-if (!configuration) {
-  // fallback in non-Docker local environment
-  configuration = require('./config/dodns.conf.js');
-}
+const configuration = require('./config/dodns.conf.js');
+
 
 
 function fetch(options, payload=null, isJson=true) {
@@ -98,7 +95,7 @@ function updateDORecord(token, domainName, domainRecordId, changeset) {
 
 
 function updateDOConfiguration(ip) {
-  console.log(`Updating Digital Ocean DNS configuration to ${ip} ${new Date().toLocaleString()}...`);
+  console.log(`${new Date().toLocaleString()}: Updating Digital Ocean DNS configuration to ${ip}...`);
 
   const requests = configuration.domains.map((domain) => {
     console.log(`Updating Digital Ocean DNS configuration for ${domain.domain}...`);

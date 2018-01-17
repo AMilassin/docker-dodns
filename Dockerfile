@@ -1,4 +1,4 @@
-FROM node:8.1.2-alpine
+FROM node:9.4.0-alpine
 MAINTAINER amilassin
 
 VOLUME "/config"

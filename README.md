@@ -46,6 +46,11 @@ You can run the container with the following command:
 docker run -d -v <local application data folder>:/config:rw amilassin/docker-dodns
 ```
 
+e.g.:
+```
+docker run -d -v $(pwd)/config:/config:rw amilassin/docker-dodns
+```
+
 
 
 # Building the container

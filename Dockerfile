@@ -1,5 +1,4 @@
-FROM node:18-alpine
-MAINTAINER amilassin
+FROM node:20-alpine
 
 VOLUME "/config"
 

@@ -53,6 +53,7 @@ function updateDOConfiguration(ip) {
         // find a record for the subdomin
         const doRecord = domainRecords.domain_records.find((record) => record.name === subdomain);
         if (!doRecord || doRecord.type !== "A") {
+          console.warn("No A record found for subdomain: '" + subdomain + "'")
           return;
         }
 
